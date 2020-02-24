@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>中国城市之歌</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <div class='section'>
+        <h1>城市之歌</h1>
+        <p>在我的心目中，中国的每一个城市都是独一无二、别具风情的。有天我突发奇想，为何不将每个城市的风格与写它的歌曲联系起来呢？于是有了这个带有私人色彩的「城市之歌」。</p>
+
+        <h4>选取标准:</h4>
+        <p>
+        <ul class='toc'>
+            <li>音乐本身是美的、高水准的。</li>
+            <li>曲调/乐器/歌词/唱腔具有当地特色，歌词意象<b style="font-weight:bold; color:red">不可</b>放诸四海皆准。</li>
+        </ul>
+        </p>
+
+    </div>
+
+    <hr>
+
+    <div class='section'>
+        <p><b class="city">武汉</b>   <b class="song">冯翔-《汉阳门花园》</b></p>
+        <p><b class="city">石家庄</b>   <b class="song3">万能青年旅店-《杀死那个石家庄人》</b></p>
+        <p><b class="city">丽江</b>   <b class="song">佚名-《一瞬间》</b></p>
+        <p><b class="city">厦门</b>   <b class="song">杨慕-《厦门亲像一首歌》</b></p>
+        <p><b class="city">南京</b>   <b class="song">李志-《热河》</b></p>
+        <p><b class="city">北京</b>   <b class="song">S.E.N.S.-《Palace Memories》</b></p>
+        <p><b class="city">香港</b>   <b class="song">BEYOND-《海阔天空》</b></p>
+    </div>
+
+    <hr>
+</body>
+</html>
+
+<script>
+document
+    .getElementById('select-speaker')
+    .addEventListener('change', function () {
+        'use strict';
+        var targets = document.getElementsByClassName("select-speaker")
+        for (let i = 0; i < targets.length; i++) {
+            name = "samples/mp3/ted_speakers/" + this.value + "/sample-" + i.toString() + ".mp3"
+            targets[i].setAttribute("src", name)
+            targets[i].parentElement.load()
+        }
+});
+</script>
